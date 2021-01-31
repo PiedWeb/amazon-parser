@@ -1,0 +1,49 @@
+{
+    "name": "piedweb/amazon-parser",
+    "description": "",
+    "keywords": [
+        "piedweb",
+        "AmazonParser"
+    ],
+    "homepage": "https://github.com/piedweb/AmazonParser",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robin",
+            "email": "contact@robin-d.fr",
+            "homepage": "https://piedweb.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "piedweb/curl": "^0.0.18",
+        "symfony/css-selector": "^5.2",
+        "symfony/dom-crawler": "^5.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpunit/phpunit": "^9.3",
+        "vimeo/psalm": "^3.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Piedweb\\AmazonParser\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Piedweb\\AmazonParser\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "prefer-stable": true
+}
